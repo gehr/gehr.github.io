@@ -43,3 +43,16 @@ all-interactions {
 demo-viewer {
 	margin-top: 1em;
 }
+
+.content {
+	min-height: 100 vh;
+	place-items: center;
+	line-height: 1.6;
+	background: var(--clr-neutral-900);
+	font-size: 1.0rem;
+    font-weight: 400;
+    letter-spacing: initial;
+    font-family: "Google Sans Display",Arial,Helvetica,sans-serif;
+	padding-left:50px;
+	padding-right:50px;
+}
