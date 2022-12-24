@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Interaction to Next Paint - basic input</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+		<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700" rel="stylesheet">
+
+		<link rel="stylesheet" href="./reset.css">
+		<link rel="stylesheet" href="./style.css">
+
+		<script type="module" src="./components/inp-score.js"></script>
+	</head>
+
+	<script>
+		var n = 1;
+
+		function change() {
+			n++;
+			if(n>20) n=1;
+			update();
+		}
+		const zeroPad = (num, places) => String(num).padStart(places, '0')
+
+		function update() {
+			document.getElementById("div").style.backgroundImage = "url('image/IMG_" + zeroPad(n, 2) + ".jpg')";
+		}
+
+	</script>
+
+	<body>
+		<main>
+
+			<button onclick="change()">Change Background (download new image)</button>
+			<button onclick="update()">Update Background</button>
+			
+			<div id='div' style="width:640px;height:640px;background-image: url('image/IMG_01.jpg');background-size: cover"></div>
+			
+		</main>
+	</body>
+</html>
