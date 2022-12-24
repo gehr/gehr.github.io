@@ -14,6 +14,11 @@
 		<script type="module" src="./components/inp-score.js"></script>
 	</head>
 
+	<!--
+        Redmi 9A screen resolution = 720 x 1600
+		iPhone 12 screen resolutio = 2532 x 1170
+	-->
+
 	<script>
 		var n = 1;
 
@@ -25,7 +30,7 @@
 		const zeroPad = (num, places) => String(num).padStart(places, '0')
 
 		function update() {
-			document.getElementById("div").style.backgroundImage = "url('image/IMG_" + zeroPad(n, 2) + ".jpg')";
+			document.getElementById("div").style.backgroundImage = "url('image/IMG_Redmi_" + zeroPad(n, 2) + ".jpg')";
 		}
 
 	</script>
